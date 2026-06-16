@@ -684,10 +684,15 @@ export default function Home() {
       {/* ============ FOOTER ============ */}
       <footer className="bg-brand-900 text-brand-100/80 py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">🌌</span>
-            <span className="font-extrabold text-white">DoWith</span>
-            <span className="text-brand-300/60 text-sm ml-2">
+          <div className="flex items-center gap-3">
+            <Image
+              src="/dowith-logo.png"
+              alt="DoWith"
+              width={120}
+              height={44}
+              className="h-7 w-auto"
+            />
+            <span className="text-brand-300/60 text-sm">
               매일이 함께 즐거운 풍부한 반려생활
             </span>
           </div>
