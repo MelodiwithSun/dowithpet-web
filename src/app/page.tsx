@@ -648,7 +648,6 @@ export default function Home() {
         <Sparkle className="top-1/2 left-[8%] text-lg" delay={1.8} />
 
         <div className="relative mx-auto max-w-3xl px-6 text-center">
-          <div className="text-6xl mb-6 float-slow inline-block">🌌</div>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1]">
             우리 아이의 우주를,
             <br />
