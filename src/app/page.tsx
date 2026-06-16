@@ -3,6 +3,8 @@ import Reveal from "@/components/Reveal";
 import ScreenTabs from "@/components/ScreenTabs";
 import MbtiMini from "@/components/MbtiMini";
 import Faq from "@/components/Faq";
+import DownloadDropdown from "@/components/DownloadDropdown";
+import { stores } from "@/lib/stores";
 
 /* ---------------- 데이터 ---------------- */
 
@@ -266,12 +268,7 @@ export default function Home() {
             >
               자주 묻는 질문
             </a>
-            <a
-              href="#download"
-              className="rounded-full bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold px-4 py-2 shadow-lg shadow-brand-500/30 transition"
-            >
-              앱 다운로드
-            </a>
+            <DownloadDropdown variant="nav" />
           </div>
         </div>
       </nav>
@@ -302,12 +299,7 @@ export default function Home() {
               우리 아이의 모든 하루를 한 곳에.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#download"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-600 to-pink-500 px-6 py-3.5 text-white font-bold shadow-xl shadow-brand-500/40 hover:shadow-2xl hover:scale-[1.02] transition"
-              >
-                <span>📲</span> 앱 다운로드
-              </a>
+              <DownloadDropdown variant="hero" />
               <a
                 href="#explore"
                 className="inline-flex items-center gap-2 rounded-full bg-white/80 backdrop-blur px-6 py-3.5 text-brand-800 font-bold ring-1 ring-brand-200 hover:bg-white transition"
@@ -658,24 +650,35 @@ export default function Home() {
           <p className="mt-6 text-lg text-brand-100/90 leading-relaxed">
             매일이 함께 즐거운 풍부한 반려생활.
             <br />
-            DoWith가 곧 찾아옵니다.
+            지금 App Store에서 DoWith를 만나보세요.
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-3">
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-brand-700 font-bold shadow-xl hover:scale-[1.03] transition"
-            >
-              🍎 App Store
-            </a>
-            <a
-              href="#"
-              className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur ring-1 ring-white/30 px-7 py-4 text-white font-bold hover:bg-white/20 transition"
-            >
-              ▶ Google Play
-            </a>
+            {stores.map((s) =>
+              s.available ? (
+                <a
+                  key={s.id}
+                  href={s.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-brand-700 font-bold shadow-xl hover:scale-[1.03] transition"
+                >
+                  <span aria-hidden>{s.emoji}</span> {s.label}
+                </a>
+              ) : (
+                <span
+                  key={s.id}
+                  className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur ring-1 ring-white/30 px-7 py-4 text-white/80 font-bold cursor-default"
+                >
+                  <span aria-hidden>{s.emoji}</span> {s.label}
+                  <span className="rounded-full bg-white/20 px-2 py-0.5 text-[11px] font-bold">
+                    곧 출시
+                  </span>
+                </span>
+              )
+            )}
           </div>
           <p className="mt-6 text-sm text-brand-200/70">
-            * 출시 준비 중이에요. 곧 만나요!
+            * Android 버전은 곧 Google Play에 출시될 예정이에요.
           </p>
         </div>
       </section>
