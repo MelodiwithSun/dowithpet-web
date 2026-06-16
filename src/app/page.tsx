@@ -180,12 +180,14 @@ const bonusFeatures = [
 
 function Logo() {
   return (
-    <div className="flex items-center gap-2">
-      <span className="text-2xl">🌌</span>
-      <span className="brand-gradient text-xl font-extrabold tracking-tight">
-        DoWith
-      </span>
-    </div>
+    <Image
+      src="/dowith-logo.png"
+      alt="DoWith"
+      width={130}
+      height={48}
+      priority
+      className="h-8 w-auto sm:h-9"
+    />
   );
 }
 
