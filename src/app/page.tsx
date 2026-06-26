@@ -342,6 +342,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ============ REAL MOMENTS CAROUSEL ============ */}
+      <section id="moments-gallery" className="py-20 lg:py-28 bg-brand-50/40">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <Reveal className="max-w-2xl">
+            <span className="text-sm font-semibold text-brand-600 uppercase tracking-wider">
+              Real moments
+            </span>
+            <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold text-brand-900 tracking-tight">
+              오늘도 함께한
+              <br />
+              <span className="brand-gradient">우리들의 순간</span>
+            </h2>
+            <p className="mt-5 text-lg text-brand-800/70">
+              강아지 산책부터 고양이 놀이까지 — DoWith로 남긴 진짜 기록 카드들이에요.
+              <span className="hidden sm:inline"> 옆으로 넘겨보세요 👉</span>
+            </p>
+          </Reveal>
+          <Reveal className="mt-12">
+            <ResultCarousel />
+          </Reveal>
+        </div>
+      </section>
+
       {/* ============ FEATURES (6 cards) ============ */}
       <section id="features" className="py-20 lg:py-28 bg-white scroll-mt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
@@ -612,31 +635,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ REAL MOMENTS CAROUSEL ============ */}
-      <section id="moments-gallery" className="py-20 lg:py-28 bg-brand-50/40">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <Reveal className="max-w-2xl">
-            <span className="text-sm font-semibold text-brand-600 uppercase tracking-wider">
-              Real moments
-            </span>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold text-brand-900 tracking-tight">
-              오늘도 함께한
-              <br />
-              <span className="brand-gradient">우리들의 순간</span>
-            </h2>
-            <p className="mt-5 text-lg text-brand-800/70">
-              강아지 산책부터 고양이 놀이까지 — DoWith로 남긴 진짜 기록 카드들이에요.
-              <span className="hidden sm:inline"> 옆으로 넘겨보세요 👉</span>
-            </p>
-          </Reveal>
-          <Reveal className="mt-12">
-            <ResultCarousel />
-          </Reveal>
-        </div>
-      </section>
-
       {/* ============ FAQ ============ */}
-      <section id="faq" className="py-20 lg:py-28 bg-white scroll-mt-16">
+      <section id="faq" className="py-20 lg:py-28 bg-brand-50/40 scroll-mt-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-sm font-semibold text-brand-600 uppercase tracking-wider">
